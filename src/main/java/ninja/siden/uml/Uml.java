@@ -40,7 +40,7 @@ public class Uml {
 		this.tokens = tokens;
 		app.get("/favicon.ico", (req, res) -> Uml.class.getClassLoader().getResource("favicon.ico"));
 		app.get("/:encoded", this::imgs);
-		app.get("/", (req, res) -> "I'm running!! yey!");
+		app.get("/hello", (req, res) -> "I'm running!! yey!");
 		app.post("/", this::outgoing).type("application/json");
 	}
 
